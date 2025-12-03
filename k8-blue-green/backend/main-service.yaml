@@ -1,0 +1,16 @@
+kind: service
+apiVersion: v1
+metadata: 
+    name: backend
+    namespace: expense
+    spec:
+      selector: # labels are used as selectors 
+      app: backend
+      tier: backend
+      project: expense
+      version: blue
+    ports: 
+    - protocal: TCP
+      port: 8080 # service port
+      targetPort: 8080 
+    
